@@ -11,7 +11,7 @@ model = create_model()
 parser = StrOutputParser()
 
 ## 1. 체인
-def test1() -> None:
+def test1_chain_sum() -> None:
     # p1
     cot_prompt = ChatPromptTemplate.from_messages([("system", "사용자 질문에 단계적으로 답변하세요."), ("human", "{question}")])
     cot_chain = cot_prompt | model | parser
@@ -27,7 +27,7 @@ def test1() -> None:
 
 
 ## 2. Lamda
-def test2() -> None:
+def test2_chain_lambda() -> None:
     def upper_text(text: str) -> str:
         return text.upper()
 
@@ -41,7 +41,7 @@ def test2() -> None:
     print(invoke_result2)
 
 
-test2()
+test2_chain_lambda()
 
 
 
