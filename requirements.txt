@@ -1,7 +1,12 @@
 python-dotenv
 langchain-openai
 langchain-core
+langchain-community
+langchain-chroma
+langchain-cohere
 pydantic
 fastapi
 langsmith
 tavily-python
+gitpython
+rank-bm25

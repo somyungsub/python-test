@@ -57,3 +57,8 @@ htmlcov/
 # Logs
 *.log
 logs/
+
+# Vector DB
+chroma_db/
+**/chroma_db/
+*.chroma
