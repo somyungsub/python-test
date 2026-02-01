@@ -163,6 +163,10 @@ def test1(compiled_workflow):
     print(result)
     print(result['messages'][-1])
 
+def test1_stream(compiled_workflow):
+    initial_state = State(query="생성형 AI에 관해 알려주세요")
+    for step in compiled_workflow.stream(initial_state):
+        print(step)
 
 def test2_checkpoint():
     def add_message(state: StateCheck) -> dict[str, Any]:
@@ -225,4 +229,5 @@ def test2_checkpoint():
 
 
 # test1(init_workflow())
-test2_checkpoint()
+test1_stream(init_workflow())
+# test2_checkpoint()
