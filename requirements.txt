@@ -10,3 +10,5 @@ langsmith
 tavily-python
 gitpython
 rank-bm25
+langgraph
+langgraph-checkpoint
